@@ -86,5 +86,5 @@ set(SOURCE_CODES
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ")
 
 add_library(crunch STATIC ${SOURCE_CODES})
-target_compile_options(crunch PUBLIC -O3 -fPIC -fomit-frame-pointer -ffast-math -fno-math-errno -fno-strict-aliasing -Wall)
-target_compile_options(crunch PUBLIC -Wno-unused-value -Wno-unused -Wno-unused-value -Wno-unused -Wno-misleading-indentation)
+target_compile_options(crunch PRIVATE -O3 -fPIC -fomit-frame-pointer -ffast-math -fno-math-errno -fno-strict-aliasing -Wall)
+target_compile_options(crunch PRIVATE -Wno-unused-value -Wno-unused -Wno-unused-value -Wno-unused -Wno-misleading-indentation)
